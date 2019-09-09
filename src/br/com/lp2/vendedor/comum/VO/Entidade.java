@@ -1,12 +1,12 @@
 package br.com.lp2.vendedor.comum.VO;
 
-public abstract class Pessoa {
+public abstract class Entidade {
 	private int id;
 	private String nome;
 	
-	public Pessoa() {}
+	public Entidade() {}
 	
-	public Pessoa(int id, String nome) {
+	public Entidade(int id, String nome) {
 		super();
 		this.id = id;
 		this.nome = nome;

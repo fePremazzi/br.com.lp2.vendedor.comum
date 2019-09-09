@@ -2,7 +2,7 @@ package br.com.lp2.vendedor.comum.VO;
 
 import java.util.Date;
 
-public class Cliente extends Pessoa {
+public class Cliente extends Entidade {
 
 	private Date dataNascimento;
 	private String cpf;

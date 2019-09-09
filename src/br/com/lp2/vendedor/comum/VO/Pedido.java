@@ -3,8 +3,8 @@ package br.com.lp2.vendedor.comum.VO;
 import java.sql.Timestamp;
 import java.util.List;
 
-public class Pedido {
-	private int id;
+public class Pedido extends Entidade {
+
 	private Timestamp dataAbertura;
 	private List<Produto> listaProdutos;
 	private Cliente cliente;
@@ -14,24 +14,15 @@ public class Pedido {
 		this.dataAbertura = new Timestamp(System.currentTimeMillis());
 	}
 
-	public Pedido(int id, 
+	public Pedido(int id, String nome,
 				List<Produto> listaProdutos, 
 				Cliente cliente, 
 				Funcionario usuario) {
-		super();
-		this.id = id;
+		super(id, nome);		
 		this.dataAbertura = new Timestamp(System.currentTimeMillis());
 		this.listaProdutos = listaProdutos;
 		this.cliente = cliente;
 		this.funcionario = usuario;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public Timestamp getDataAbertura() {

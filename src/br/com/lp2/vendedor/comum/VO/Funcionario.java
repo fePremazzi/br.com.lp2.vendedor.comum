@@ -2,7 +2,7 @@ package br.com.lp2.vendedor.comum.VO;
 
 import br.com.lp2.vendedor.comum.Enums.TipoCargo;
 
-public class Funcionario extends Pessoa {
+public class Funcionario extends Entidade {
 	private TipoCargo cargo;
 	private String username;
 	private String senha;
