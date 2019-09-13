@@ -12,12 +12,20 @@ public class Cliente extends Entidade {
 		super();
 	}
 
+	public Cliente(String nome, Date dataNascimento, String cpf, String endereco) {
+		super(nome);
+		this.dataNascimento = dataNascimento;
+		this.cpf = cpf;
+		this.endereco = endereco;
+	}
+	
 	public Cliente(int id, String nome, Date dataNascimento, String cpf, String endereco) {
 		super(id, nome);
 		this.dataNascimento = dataNascimento;
 		this.cpf = cpf;
 		this.endereco = endereco;
 	}
+
 
 	public Date getDataNascimento() {
 		return dataNascimento;

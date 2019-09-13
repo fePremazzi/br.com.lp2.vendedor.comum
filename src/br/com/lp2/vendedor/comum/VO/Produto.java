@@ -10,6 +10,13 @@ public class Produto extends Entidade{
 	
 	public Produto() {}	
 
+	public Produto(String nome, String descricao, double valorUnit, TipoProduto tipoProduto) {
+		super(nome);
+		this.descricao = descricao;
+		this.valorUnit = valorUnit;
+		this.tipoProduto = tipoProduto;
+	}
+	
 	public Produto(int id, String nome, String descricao, double valorUnit, TipoProduto tipoProduto) {
 		super(id, nome);
 		this.descricao = descricao;

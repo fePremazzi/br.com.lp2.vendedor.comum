@@ -11,6 +11,12 @@ public abstract class Entidade {
 		this.id = id;
 		this.nome = nome;
 	}
+	
+	public Entidade(String nome) {
+		super();
+		
+		this.nome = nome;
+	}
 
 	public int getId() {
 		return id;

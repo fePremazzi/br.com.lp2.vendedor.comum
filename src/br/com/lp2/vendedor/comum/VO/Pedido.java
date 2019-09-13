@@ -9,17 +9,30 @@ public class Pedido extends Entidade {
 	private List<Produto> listaProdutos;
 	private Cliente cliente;
 	private Funcionario funcionario;
-	
+
 	public Pedido() {
 		this.dataAbertura = new Timestamp(System.currentTimeMillis());
 	}
 
-	public Pedido(int id, String nome,
-				List<Produto> listaProdutos, 
-				Cliente cliente, 
-				Funcionario usuario) {
-		super(id, nome);		
+	public Pedido(String nome, List<Produto> listaProdutos, Cliente cliente, Funcionario usuario) {
+		super(nome);
 		this.dataAbertura = new Timestamp(System.currentTimeMillis());
+		this.listaProdutos = listaProdutos;
+		this.cliente = cliente;
+		this.funcionario = usuario;
+	}
+
+	public Pedido(int id, String nome, List<Produto> listaProdutos, Cliente cliente, Funcionario usuario) {
+		super(id, nome);
+		this.dataAbertura = new Timestamp(System.currentTimeMillis());
+		this.listaProdutos = listaProdutos;
+		this.cliente = cliente;
+		this.funcionario = usuario;
+	}
+	
+	public Pedido(int id, String nome, Timestamp data, List<Produto> listaProdutos, Cliente cliente, Funcionario usuario) {
+		super(id, nome);
+		this.dataAbertura = data;
 		this.listaProdutos = listaProdutos;
 		this.cliente = cliente;
 		this.funcionario = usuario;
@@ -27,6 +40,10 @@ public class Pedido extends Entidade {
 
 	public Timestamp getDataAbertura() {
 		return dataAbertura;
+	}
+	
+	public void setDataAbertura(Timestamp data) {
+		this.dataAbertura = data;
 	}
 
 	public List<Produto> getListaProdutos() {

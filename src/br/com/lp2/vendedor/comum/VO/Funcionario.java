@@ -9,8 +9,15 @@ public class Funcionario extends Entidade {
 	
 	public Funcionario() {}
 	
-	public Funcionario(String nome, int id, TipoCargo cargo, String username, String senha) {
+	public Funcionario(int id, String nome,TipoCargo cargo, String username, String senha) {
 		super(id, nome);
+		this.cargo = cargo;
+		this.username = username;
+		this.senha = senha;
+	}
+	
+	public Funcionario(String nome,TipoCargo cargo, String username, String senha) {
+		super(nome);
 		this.cargo = cargo;
 		this.username = username;
 		this.senha = senha;
