@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Cliente extends Entidade {
 
-	private Date dataNascimento;
+	private String dataNascimento;
 	private String cpf;
 	private String endereco;
 
@@ -12,26 +12,30 @@ public class Cliente extends Entidade {
 		super();
 	}
 
-	public Cliente(String nome, Date dataNascimento, String cpf, String endereco) {
+	public Cliente(String nome, String dataNascimento, String cpf, String endereco) {
 		super(nome);
 		this.dataNascimento = dataNascimento;
 		this.cpf = cpf;
 		this.endereco = endereco;
 	}
-	
-	public Cliente(int id, String nome, Date dataNascimento, String cpf, String endereco) {
+
+	public Cliente(int id, String nome, String dataNascimento, String cpf, String endereco) {
 		super(id, nome);
 		this.dataNascimento = dataNascimento;
 		this.cpf = cpf;
 		this.endereco = endereco;
 	}
 
+	public String toString() {
+		return "Id: " + getId() + "\nNome: " + getNome() + "\nData de nascimento: " + this.dataNascimento + "\nCPF: "
+				+ this.cpf + "\nEndereco: " + this.endereco;
+	}
 
-	public Date getDataNascimento() {
+	public String getDataNascimento() {
 		return dataNascimento;
 	}
 
-	public void setDataNascimento(Date dataNascimento) {
+	public void setDataNascimento(String dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 
